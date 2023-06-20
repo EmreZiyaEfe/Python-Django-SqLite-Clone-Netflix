@@ -1,0 +1,11 @@
+{% extends "index.html" %}
+
+{% block content %}
+    <div class="container mt-5">
+        <form method="POST" action=""  enctype="multipart/form-data" class="w-50 m-auto border p-4 text-light">
+            {% csrf_token %}
+            {{form}}
+            <input type="submit" value="Profil Oluştur" class="btn btn-primary mt2">
+        </form>
+    </div>
+{% endblock content %}
