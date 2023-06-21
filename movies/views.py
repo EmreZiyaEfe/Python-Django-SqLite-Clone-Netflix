@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import *
 from user.models import *
 
@@ -25,3 +25,9 @@ def video(request, movieId):
     }
     return render(request, 'video.html', context)
 
+
+def view_404(request, exception):
+    return redirect('/')
+
+def view_500(request):
+    return render(request, 'hata.html')

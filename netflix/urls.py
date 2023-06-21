@@ -28,3 +28,8 @@ urlpatterns = [
     path('', include('movies.urls')),
     path('user/', include('user.urls'))
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+
+
+handler404 = 'movies.views.view_404'
+handler500 = 'movies.views.view_500'
+
