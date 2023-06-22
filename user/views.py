@@ -144,3 +144,9 @@ def update(request):
         'hesap' : hesapForm
     }
     return render(request, 'update.html', context)
+
+
+def userLogout(request):
+    logout(request)
+    messages.success(request, 'Çıkıs yapıldı')
+    return redirect('index')
